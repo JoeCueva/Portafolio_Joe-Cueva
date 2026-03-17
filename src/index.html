@@ -1,13 +1,68 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
+
 <head>
   <meta charset="utf-8">
   <title>PortafolioWeb</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
+
 <body>
   <app-root></app-root>
+
+  <script>
+    let body = document.querySelector('body');
+
+    function createParticula(x, y, esMouse = false) {
+      let particle = document.createElement('div');
+      particle.classList.add('particle');
+
+      particle.style.left = `${x}px`;
+      particle.style.top = `${y}px`;
+
+      let rango = esMouse ? 150 : 80;
+      let moveX = (Math.random() - 0.5) * rango;
+      let moveY = (Math.random() - 0.5) * rango;
+
+      particle.style.setProperty('--move-x', `${moveX}px`);
+      particle.style.setProperty('--move-y', `${moveY}px`);
+
+      let size = esMouse
+        ? Math.random() * 5 + 2
+        : Math.random() * 3 + 1;
+
+      particle.style.width = `${size}px`;
+      particle.style.height = `${size}px`;
+
+      let duration = Math.random() * 4 + 3;
+      particle.style.animationDuration = `${duration}s`;
+
+      body.appendChild(particle);
+      setTimeout(() => particle.remove(), duration * 1000);
+    }
+
+    setInterval(() => {
+      for (let i = 0; i < 5; i++) {
+        let x = Math.random() * window.innerWidth;
+        let y = Math.random() * window.innerHeight;
+        createParticula(x, y, false);
+      }
+    }, 150);
+
+    document.addEventListener('mousemove', (e) => {
+      if (Math.random() < 0.3) {
+        createParticula(e.clientX, e.clientY, true);
+      }
+    });
+
+  </script>
+
+
 </body>
+
 </html>

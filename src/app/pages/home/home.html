@@ -1,0 +1,45 @@
+<section id="hero" class="hero-section-primary-landing-container">
+    <div class="hero-section-content-wrapper-flex-layout">
+
+        <div class="hero-section-textual-information-block">
+            <div class="hero-section-heading-group-container">
+                <h1 class="hero-section-main-title-display-typography">
+                    ¡ Hola, soy Joe !!
+                </h1>
+                <h2 class="hero-section-secondary-subtitle-descriptor">
+                    {{displayedText}} <span class="cursor">|</span>
+                </h2>
+            </div>
+            <div class="hero-section-description-paragraph-wrapper">
+                <p class="hero-section-description-text-emphasis">
+                    Me apasiona programar y crear aplicaciones que resuelvan problemas reales.
+                    Construyamos algo increíble juntos.
+                </p>
+            </div>
+
+            <div class="hero-section-call-to-action-button-group">
+                <a class="hero-section-primary-call-to-action-button-interactive" href="#project">Ver Proyectos</a>
+                <a class="hero-section-secondary-call-to-action-button-outlined" href="/assets/files/JoeCueva_CV.pdf"
+                    download="JoeCueva_CV.pdf">
+                    Descargar CV
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-section-spline-robot-container">
+            @if (!robotVisible) {
+            <div class="hero-robot-skeleton-placeholder"></div>
+            }
+            @if (robotVisible) {
+            <spline-viewer url="https://prod.spline.design/NYeXZEMlQ1luMPAX/scene.splinecode">
+            </spline-viewer>
+            }
+
+        </div>
+
+    </div>
+</section>
+
+<app-about></app-about>
+<app-skills></app-skills>
+<app-projects></app-projects>

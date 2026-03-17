@@ -1,0 +1,426 @@
+@font-face {
+    font-family: 'Parkinsans-Light';
+    src: url('../../../assets/fonts/Parkinsans-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Parkinsans-Regular';
+    src: url('../../../assets/fonts/Parkinsans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Parkinsans-SemiBold';
+    src: url('../../../assets/fonts/Parkinsans-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Parkinsans-Bold';
+    src: url('../../../assets/fonts/Parkinsans-Bold.ttf');
+}
+
+:root {
+    --color-principal: #32CD32;
+    --color-secundario: #00FF66;
+    --color-terciario: #0A0A0A;
+    --color-cuartenario: #2E2E2E;
+    --color-quinario: #FFFFFF;
+}
+
+
+.portfolio-primary-navigation-wrapper-container {
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    height: 8vh;
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--color-cuartenario);
+    box-shadow: 0 5px 10px var(--color-cuartenario);
+    z-index: 1000;
+}
+
+
+.portfolio-navigation-structural-alignment-grid-system {
+    width: 90%;
+    max-width: 1500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portfolio-navigation-avatar-item-element {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Parkinsans-Bold';
+    font-size: 20px;
+    color: var(--color-quinario);
+}
+
+.portfolio-navigation-icon-images-element {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: var(--color-quinario);
+    padding: 2px;
+}
+
+.portfolio-navigation-interactive-link-group-container {
+    display: flex;
+    gap: 35px;
+}
+
+.portfolio-navigation-link-item-element {
+    position: relative;
+    font-family: 'Parkinsans-Regular';
+    text-decoration: none;
+    color: var(--color-quinario);
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.portfolio-navigation-link-item-element:hover {
+    color: var(--color-secundario);
+}
+
+.portfolio-navigation-link-item-element::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-principal);
+    transition: width 0.3s ease;
+}
+
+.portfolio-navigation-link-item-element:hover::after {
+    width: 100%;
+}
+
+/* ================================================================= */
+/* ====================== ANIMACION DE CARGA ======================= */
+/* ================================================================= */
+
+.portfolio-primary-navigation-wrapper-container {
+    animation: navEntrada 0.8s ease forwards;
+}
+
+.portfolio-navigation-avatar-item-element {
+    animation: fadeSlide 0.8s ease 0.3s both;
+}
+
+.portfolio-navigation-link-item-element {
+    opacity: 0;
+    animation: fadeSlide 0.5s ease forwards;
+}
+
+.portfolio-navigation-link-item-element:nth-child(1) {
+    animation-delay: 0.4s;
+}
+
+.portfolio-navigation-link-item-element:nth-child(2) {
+    animation-delay: 0.55s;
+}
+
+.portfolio-navigation-link-item-element:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.portfolio-navigation-link-item-element:nth-child(4) {
+    animation-delay: 0.85s;
+}
+
+.portfolio-navigation-link-item-element:nth-child(5) {
+    animation-delay: 1s;
+}
+
+/* ================================================================= */
+/* ========================== MODAL ================================= */
+/* ================================================================= */
+
+.nav-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: modalFadeIn 0.25s ease forwards;
+}
+
+.nav-modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    animation: modalZoomIn 0.3s ease forwards;
+}
+
+.nav-modal-image {
+    width: 380px;
+    height: 380px;
+    border-radius: 10%;
+    object-fit: cover;
+    border: 3px solid var(--color-principal);
+    box-shadow: 0 0 40px rgba(50, 205, 50, 0.4);
+}
+
+.nav-modal-name {
+    color: var(--color-quinario);
+    font-family: 'Parkinsans-Bold';
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.nav-modal-close {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    background: transparent;
+    border: 1px solid var(--color-cuartenario);
+    color: var(--color-quinario);
+    font-size: 18px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Parkinsans-Regular';
+}
+
+.nav-modal-close:hover {
+    background-color: var(--color-principal);
+    border-color: var(--color-principal);
+    color: var(--color-terciario);
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalZoomIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes navEntrada {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ================================================================= */
+/* ====================== HAMBURGUESA ============================== */
+/* ================================================================= */
+
+.nav-hamburger-button {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid var(--color-cuartenario);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 8px;
+    transition: border-color 0.3s ease;
+    z-index: 1100;
+}
+
+.nav-hamburger-button:hover {
+    border-color: var(--color-principal);
+}
+
+.nav-hamburger-button span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--color-quinario);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+/* Animación X al abrir */
+.nav-hamburger-button.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-hamburger-button.open span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.nav-hamburger-button.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── OVERLAY fondo ── */
+.nav-mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 900;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-mobile-menu-overlay.open {
+    opacity: 1;
+}
+
+/* ── PANEL lateral ── */
+.nav-mobile-menu-panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background: #0f0f0f;
+    border-left: 1px solid var(--color-cuartenario);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 90px 32px 40px;
+    gap: 8px;
+    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-mobile-menu-panel.open {
+    right: 0;
+}
+
+.nav-mobile-link {
+    font-family: 'Parkinsans-Regular';
+    font-size: 1.1rem;
+    color: var(--color-quinario);
+    text-decoration: none;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--color-cuartenario);
+    transition: color 0.2s ease, padding-left 0.2s ease;
+    position: relative;
+}
+
+.nav-mobile-link:last-child {
+    border-bottom: none;
+}
+
+.nav-mobile-link:hover {
+    color: var(--color-principal);
+    padding-left: 8px;
+}
+
+@media (max-width: 768px) {
+
+    .portfolio-navigation-interactive-link-group-container {
+        display: none;
+    }
+
+    .nav-hamburger-button {
+        display: flex;
+    }
+
+    .nav-mobile-menu-overlay.open {
+        display: block;
+    }
+
+    .portfolio-navigation-avatar-item-element {
+        font-size: 16px;
+        gap: 10px;
+    }
+
+    .portfolio-navigation-icon-images-element {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+@media (max-width: 430px) {
+    .nav-mobile-menu-panel {
+        width: 85%;
+    }
+
+    .portfolio-navigation-avatar-item-element {
+        font-size: 14px;
+    }
+
+    .portfolio-navigation-icon-images-element {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media (max-width: 375px) {
+    .nav-mobile-menu-panel {
+        width: 90%;
+        padding: 80px 24px 32px;
+    }
+
+    .nav-mobile-link {
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .nav-mobile-menu-panel {
+        width: 95%;
+        padding: 76px 18px 28px;
+    }
+
+    .nav-mobile-link {
+        font-size: 0.95rem;
+    }
+
+    .portfolio-navigation-icon-images-element {
+        width: 34px;
+        height: 34px;
+    }
+}

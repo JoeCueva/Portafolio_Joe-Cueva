@@ -1,0 +1,431 @@
+@font-face {
+    font-family: 'Parkinsans-Light';
+    src: url('../../../assets/fonts/Parkinsans-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Parkinsans-Regular';
+    src: url('../../../assets/fonts/Parkinsans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Parkinsans-SemiBold';
+    src: url('../../../assets/fonts/Parkinsans-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Parkinsans-Bold';
+    src: url('../../../assets/fonts/Parkinsans-Bold.ttf');
+}
+
+:root {
+    --color-principal: #32CD32;
+    --color-secundario: #00FF66;
+    --color-terciario: #0A0A0A;
+    --color-cuartenario: #2E2E2E;
+    --color-quinario: #FFFFFF;
+}
+
+.portfolio-footer-global-main-wrapper-container {
+    height: 35vh;
+    padding: 100px;
+}
+
+
+.portfolio-footer-call-to-action-outer-structure-container {
+    width: 100%;
+}
+
+.portfolio-footer-call-to-action-inner-content-flex-container {
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    color: var(--color-quinario);
+    position: relative;
+    z-index: 1;
+}
+
+.portfolio-footer-call-to-action-primary-title-text {
+    font-family: 'Parkinsans-Bold';
+    font-size: 3rem;
+    margin: 5px;
+}
+
+.portfolio-footer-call-to-action-secondary-description-text {
+    font-family: 'Parkinsans-Light';
+    font-size: 1rem;
+}
+
+.portfolio-footer-call-to-action-primary-interactive-button-element {
+    margin-top: 10px;
+    padding: 14px 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    font-family: 'Parkinsans-SemiBold';
+    font-size: 1rem;
+    color: var(--color-quinario);
+    text-decoration: none;
+    background:
+        radial-gradient(circle at 50% 50%, rgba(0, 255, 102, 0.582), transparent 60%),
+        radial-gradient(circle at 20% 80%, rgba(255, 252, 252, 0.295), transparent 30%),
+        radial-gradient(circle at 80% 20%, rgba(1, 255, 102, 0.774), transparent 70%),
+        var(--color-cuartenario);
+
+    background-size: 200% 200%;
+    backdrop-filter: blur(12px);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: humo 6s ease-in-out infinite;
+    z-index: 1;
+}
+
+.portfolio-footer-call-to-action-primary-interactive-button-element:hover {
+    background: linear-gradient(80deg, var(--color-principal));
+    box-shadow: 0 0 25px var(--color-secundario);
+    transform: translateY(-3px);
+}
+
+@keyframes humo {
+    0% {
+        background-position: 0% 50%, 10% 10%, 90% 90%;
+    }
+
+    33% {
+        background-position: 100% 50%, 40% 70%, 10% 30%;
+    }
+
+    66% {
+        background-position: 50% 100%, 80% 20%, 30% 80%;
+    }
+
+    100% {
+        background-position: 0% 50%, 10% 10%, 90% 90%;
+    }
+}
+
+.portfolio-footer-bottom-legal-and-social-media-wrapper-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    font-family: 'Parkinsans-SemiBold';
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.portfolio-footer-bottom-legal-and-social-media-inner-flex-alignment-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 60px;
+}
+
+.portfolio-footer-bottom-copyright-textual-information-container {
+    color: var(--color-quinario);
+    font-size: 1.0rem;
+}
+
+.portfolio-footer-bottom-social-media-icon-links-flex-container {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.portfolio-footer-bottom-social-media-interactive-icon-anchor-element {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #aaaaaa;
+    background: rgba(46, 46, 46, 0.4);
+    border: 1px solid rgba(46, 46, 46, 0.8);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    overflow: visible;
+}
+
+.portfolio-footer-bottom-social-media-interactive-icon-anchor-element::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 255, 102, 0.15), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-footer-bottom-social-media-interactive-icon-anchor-element:hover::before {
+    opacity: 1;
+}
+
+.portfolio-footer-bottom-social-media-interactive-icon-anchor-element:hover {
+    color: var(--color-secundario);
+    border-color: rgba(0, 255, 102, 0.5);
+    box-shadow:
+        0 0 12px rgba(0, 255, 102, 0.2),
+        inset 0 0 12px rgba(0, 255, 102, 0.05);
+    transform: translateY(-3px);
+}
+
+.portfolio-footer-bottom-social-media-interactive-icon-anchor-element:active {
+    transform: translateY(0px) scale(0.95);
+}
+
+.portfolio-footer-bottom-social-media-interactive-icon-anchor-element::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(10px);
+    color: var(--color-secundario);
+    font-size: 12px;
+    font-family: 'Parkinsans-Regular';
+    white-space: nowrap;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 102, 0.2);
+    box-shadow: 0 0 12px rgba(0, 255, 102, 0.15);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.portfolio-footer-bottom-social-media-interactive-icon-anchor-element:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0px);
+}
+
+/* ================================================================= */
+/* ====================== ANIMACION DE CARGA ======================= */
+/* ================================================================= */
+
+.portfolio-footer-call-to-action-outer-structure-container {
+    animation: fadeSube 0.8s ease both;
+}
+
+.portfolio-footer-call-to-action-primary-title-text {
+    animation: fadeSube 0.7s ease 0.2s both;
+}
+
+.portfolio-footer-call-to-action-secondary-description-text {
+    animation: fadeSube 0.7s ease 0.4s both;
+}
+
+.portfolio-footer-bottom-legal-and-social-media-wrapper-container {
+    animation: fadeSube 0.7s ease 0.8s both;
+}
+
+.portfolio-footer-bottom-social-media-interactive-icon-anchor-element {
+    opacity: 0;
+    animation: fadeSube 0.5s ease forwards;
+}
+
+.portfolio-footer-bottom-social-media-interactive-icon-anchor-element:nth-child(1) {
+    animation-delay: 0.9s;
+}
+
+.portfolio-footer-bottom-social-media-interactive-icon-anchor-element:nth-child(2) {
+    animation-delay: 1.05s;
+}
+
+.portfolio-footer-bottom-social-media-interactive-icon-anchor-element:nth-child(3) {
+    animation-delay: 1.2s;
+}
+
+@keyframes fadeSube {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1200px) {
+    .portfolio-footer-global-main-wrapper-container {
+        padding: 70px 60px;
+    }
+
+    .portfolio-footer-call-to-action-primary-title-text {
+        font-size: 2.6rem;
+    }
+
+    .portfolio-footer-bottom-legal-and-social-media-inner-flex-alignment-container {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .portfolio-footer-global-main-wrapper-container {
+        height: auto;
+        padding: 60px 40px;
+    }
+
+    .portfolio-footer-call-to-action-primary-title-text {
+        font-size: 2.2rem;
+    }
+
+    .portfolio-footer-call-to-action-secondary-description-text {
+        font-size: 0.95rem;
+    }
+
+    .portfolio-footer-bottom-legal-and-social-media-inner-flex-alignment-container {
+        padding: 30px;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-footer-global-main-wrapper-container {
+        height: auto;
+        padding: 50px 24px 30px;
+    }
+
+    .portfolio-footer-call-to-action-primary-title-text {
+        font-size: 1.9rem;
+        line-height: 1.3;
+    }
+
+    .portfolio-footer-call-to-action-secondary-description-text {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        padding: 0 8px;
+    }
+
+    .portfolio-footer-call-to-action-primary-interactive-button-element {
+        padding: 12px 32px;
+        font-size: 0.95rem;
+        display: inline-block;
+        margin-top: 16px;
+    }
+
+    .portfolio-footer-bottom-legal-and-social-media-inner-flex-alignment-container {
+        flex-direction: column;
+        gap: 16px;
+        padding: 24px 16px;
+    }
+
+    .portfolio-footer-bottom-copyright-textual-information-container {
+        font-size: 0.9rem;
+    }
+
+    .portfolio-footer-bottom-social-media-icon-links-flex-container {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 430px) {
+    .portfolio-footer-global-main-wrapper-container {
+        padding: 40px 18px 24px;
+    }
+
+    .portfolio-footer-call-to-action-primary-title-text {
+        font-size: 1.6rem;
+    }
+
+    .portfolio-footer-call-to-action-secondary-description-text {
+        font-size: 0.85rem;
+        padding: 0 4px;
+    }
+
+    .portfolio-footer-call-to-action-primary-interactive-button-element {
+        padding: 11px 5px;
+        font-size: 0.9rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .portfolio-footer-bottom-legal-and-social-media-inner-flex-alignment-container {
+        padding: 20px 12px;
+        gap: 14px;
+    }
+
+    .portfolio-footer-bottom-copyright-textual-information-container {
+        font-size: 0.85rem;
+    }
+
+    .portfolio-footer-bottom-social-media-interactive-icon-anchor-element {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+
+    .portfolio-footer-bottom-social-media-interactive-icon-anchor-element::after {
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .portfolio-footer-global-main-wrapper-container {
+        padding: 36px 14px 20px;
+    }
+
+    .portfolio-footer-call-to-action-primary-title-text {
+        font-size: 1.4rem;
+    }
+
+    .portfolio-footer-call-to-action-secondary-description-text {
+        font-size: 0.82rem;
+    }
+
+    .portfolio-footer-call-to-action-primary-interactive-button-element {
+        padding: 10px 22px;
+        font-size: 0.85rem;
+    }
+
+    .portfolio-footer-bottom-legal-and-social-media-inner-flex-alignment-container {
+        padding: 16px 10px;
+        gap: 12px;
+    }
+
+    .portfolio-footer-bottom-social-media-icon-links-flex-container {
+        gap: 10px;
+    }
+
+    .portfolio-footer-bottom-social-media-interactive-icon-anchor-element {
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 320px) {
+    .portfolio-footer-global-main-wrapper-container {
+        padding: 30px 10px 16px;
+    }
+
+    .portfolio-footer-call-to-action-primary-title-text {
+        font-size: 1.2rem;
+    }
+
+    .portfolio-footer-call-to-action-secondary-description-text {
+        font-size: 0.78rem;
+    }
+
+    .portfolio-footer-call-to-action-primary-interactive-button-element {
+        padding: 9px 18px;
+        font-size: 0.82rem;
+    }
+
+    .portfolio-footer-bottom-social-media-interactive-icon-anchor-element {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+    }
+
+    .portfolio-footer-bottom-copyright-textual-information-container {
+        font-size: 0.78rem;
+    }
+}

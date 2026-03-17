@@ -1,0 +1,189 @@
+<section id="about" class="about-section-professional-summary-container">
+    <div class="section-container-presentation-personal-introduction-wrapper">
+        <div class="presentation-content-flex-structure-primary-layout">
+            <h1 class="presentation-main-title-heading-uppercase-highlighted">
+                ME PRESENTO
+            </h1>
+            <div class="presentation-description-text-block-container">
+                <p class="presentation-personal-identity-fullname-age-statement">
+                    Hola, mi nombre completo es Joe Sebastián Emilio Cueva Sinche, tengo 20 años.
+                </p>
+
+                <p class="presentation-professional-profile-fullstack-developer-in-training-description">
+                    Soy un desarrollador Web FullStack en formación con un gran interés en la creación de aplicaciones
+                    modernas,
+                    funcionales y bien estructuradas. Me apasiona mucho el escribir codigo limpio, entendible y bien
+                    estructurado, siguiendo
+                    prácticas de desarrollo y una organización clara en cada proyecto.
+                </p>
+
+                <p class="presentation-professional-profile-fullstack-developer-in-training-description">
+                    Actualmente me encuentro fortalaciendo mis conocimientos mediantes proyectos de práctica y proyectos
+                    reales, donde busco
+                    aplicar mis conceptos de desarrollo tanto de FrontEnd como del BackEnd, con estructuración de
+                    servicios Web y aplicaciones concretas.
+                </p>
+
+                <p class="presentation-professional-profile-fullstack-developer-in-training-description">
+                    Mi objetivo es poder seguir creciendo como desarrollador, participar en proyectos innovadores y
+                    contribuir con soluciones
+                    que generen valor real para las personas y las organizaciones, y estar dispuesto a aprender nuevas
+                    tecnologías, mejorando mis habilidades y
+                    enfrentando nuevos desafíos dentro del mundo del desarrollo de software :).
+                </p>
+            </div>
+        </div>
+
+        <h2>Educación</h2>
+
+        <div class="education timeline-wrapper">
+            <div class="presentation-content-flex-structure-secundary">
+                <div class="presentation-content-flex-timeline-items">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <span class="timeline-title">Computación e Informática</span>
+                        <span class="timeline-badge badge-formal">Técnico</span>
+                    </div>
+                    <p class="timeline-meta"><strong>Cibertec</strong> &nbsp;•&nbsp; 2022 – 2025</p>
+                    <p class="timeline-desc">
+                        Formación técnica enfocada en desarrollo de software, programación web, bases de datos
+                        y construcción de aplicaciones FullStack.
+                    </p>
+                </div>
+            </div>
+
+            <div class="presentation-content-flex-structure-secundary">
+                <div class="presentation-content-flex-timeline-items">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <span class="timeline-title">Frontend Web Development</span>
+                        <span class="timeline-badge badge-udemy">Udemy</span>
+                    </div>
+                    <p class="timeline-meta"><strong>Udemy</strong> &nbsp;•&nbsp; Ene 2024</p>
+                    <p class="timeline-desc">
+                        Curso intensivo de desarrollo frontend moderno: HTML5, CSS3, JavaScript avanzado,
+                        frameworks de UI y buenas prácticas de accesibilidad y rendimiento web.
+                    </p>
+                </div>
+            </div>
+            <div class="presentation-content-flex-structure-secundary">
+                <div class="presentation-content-flex-timeline-items">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-header">
+                        <span class="timeline-title">
+                            Posicionamiento de Marca Personal
+                        </span>
+
+                        <span class="timeline-badge badge-trascend">
+                            Trascend
+                        </span>
+                    </div>
+                    <p class="timeline-meta">
+                        <strong>Trascend</strong> &nbsp;•&nbsp; Ene 2025
+                    </p>
+                    <p class="timeline-desc">
+                        Curso enfocado en el desarrollo y posicionamiento de marca personal
+                        dentro del entorno profesional digital, trabajando la propuesta de valor,
+                        identidad de marca y estrategias de comunicación orientadas al desarrollo
+                        de presencia profesional en plataformas web.
+                    </p>
+                    <button class="presentation-education-syllabus-expandable-toggle-button-control"
+                        [class.open]="syllabusOpen" [attr.aria-expanded]="syllabusOpen" (click)="toggleSyllabus()">
+
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                        Ver programa del curso
+                    </button>
+                    <div class="presentation-education-syllabus-detailed-program-structure-table-wrapper"
+                        [style.display]="syllabusOpen ? 'block' : 'none'">
+                        <table class="presentation-education-syllabus-table-content-structure">
+                            <thead>
+                                <tr>
+                                    <th>Semana / Sesión</th>
+                                    <th>Fecha</th>
+                                    <th>Tema Principal</th>
+                                    <th>Entregables</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>S1 · 01</td>
+                                    <td>Mar 6 Ene</td>
+                                    <td>ADN de marca y análisis de competencia</td>
+                                    <td>Identificación de propuesta de valor</td>
+                                </tr>
+
+                                <tr>
+                                    <td>S1 · 02</td>
+                                    <td>Jue 8 Ene</td>
+                                    <td>Propósito, personalidad y tono de comunicación</td>
+                                    <td>Elevator pitch y definición de personalidad</td>
+                                </tr>
+
+                                <tr>
+                                    <td>S2 · 03</td>
+                                    <td>Mar 13 Ene</td>
+                                    <td>Propuesta de valor y estructura de contenido</td>
+                                    <td>Borrador de estructura de servicios</td>
+                                </tr>
+
+                                <tr>
+                                    <td>S2 · 04</td>
+                                    <td>Jue 15 Ene</td>
+                                    <td>Concepto web y experiencia digital</td>
+                                    <td>Mapa de contenido web</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h2>Certificados</h2>
+
+        <div class="about-certificates-grid-container">
+            <div class="about-certificate-card-item"
+                (click)="abrirCertificado('/images/certificados/certificado01.png')">
+                <img class="about-certificate-thumbnail-image" src="/images/certificados/certificado01.png"
+                    alt="Certificado 1">
+                <div class="about-certificate-overlay-hover-effect">
+                    <span>Ver certificado</span>
+                </div>
+            </div>
+
+            <div class="about-certificate-card-item"
+                (click)="abrirCertificado('/images/certificados/certificado02.png')">
+                <img class="about-certificate-thumbnail-image" src="/images/certificados/certificado02.png"
+                    alt="Certificado 2">
+                <div class="about-certificate-overlay-hover-effect">
+                    <span>Ver certificado</span>
+                </div>
+            </div>
+
+            <div class="about-certificate-card-item"
+                (click)="abrirCertificado('/images/certificados/certificado03.png')">
+                <img class="about-certificate-thumbnail-image" src="/images/certificados/certificado03.png"
+                    alt="Certificado 3">
+                <div class="about-certificate-overlay-hover-effect">
+                    <span>Ver certificado</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@if(modalCertificado) {
+<div class="about-certificate-modal-overlay" (click)="cerrarCertificado()">
+    <div class="about-certificate-modal-content" (click)="$event.stopPropagation()">
+        <button class="about-certificate-modal-close-button" (click)="cerrarCertificado()">✕</button>
+        <img class="about-certificate-modal-fullsize-image" [src]="certificadoActivo" alt="Certificado completo">
+    </div>
+</div>
+}

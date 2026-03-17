@@ -1,0 +1,220 @@
+:root {
+    --color-principal: #32CD32;
+    --color-secundario: #00FF66;
+    --color-terciario: #0A0A0A;
+    --color-cuartenario: #2E2E2E;
+    --color-quinario: #FFFFFF;
+}
+
+.professional-technology-stack-section-main-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.professional-technology-stack-content-global-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Parkinsans-Light';
+}
+
+.professional-technology-stack-header-title-container {
+    margin-bottom: 50px;
+}
+
+.professional-technology-stack-main-title-heading {
+    font-size: 3rem;
+    text-shadow: 0 0 8px rgba(50, 205, 50, 0.6);
+    font-family: 'Parkinsans-Bold';
+    color: var(--color-quinario);
+}
+
+.professional-technology-stack-main-description-heading {
+    color: var(--color-quinario);
+}
+
+.professional-technology-stack-icons-grid-all-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+    justify-items: center;
+}
+
+.tech {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--color-quinario);
+    font-size: 0.95rem;
+    transition: transform 0.3s ease;
+}
+
+.tech i {
+    font-size: 55px;
+}
+
+.tech:hover {
+    transform: scale(1.15);
+}
+
+@media (max-width: 1200px) {
+    .professional-technology-stack-content-global-wrapper {
+        width: 85%;
+    }
+
+    .professional-technology-stack-main-title-heading {
+        font-size: 2.6rem;
+    }
+
+    .professional-technology-stack-icons-grid-all-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .professional-technology-stack-content-global-wrapper {
+        width: 90%;
+    }
+
+    .professional-technology-stack-main-title-heading {
+        font-size: 2.2rem;
+    }
+
+    .professional-technology-stack-main-description-heading {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .professional-technology-stack-icons-grid-all-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    .tech i {
+        font-size: 46px;
+    }
+}
+
+@media (max-width: 768px) {
+    .professional-technology-stack-content-global-wrapper {
+        width: 92%;
+        padding: 0 8px;
+    }
+
+    .professional-technology-stack-header-title-container {
+        margin-bottom: 36px;
+    }
+
+    .professional-technology-stack-main-title-heading {
+        font-size: 2rem;
+    }
+
+    .professional-technology-stack-main-description-heading {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .professional-technology-stack-icons-grid-all-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+    }
+
+    .tech i {
+        font-size: 42px;
+    }
+
+    .tech {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 430px) {
+    .professional-technology-stack-content-global-wrapper {
+        width: 95%;
+    }
+
+    .professional-technology-stack-header-title-container {
+        margin-bottom: 28px;
+    }
+
+    .professional-technology-stack-main-title-heading {
+        font-size: 1.7rem;
+    }
+
+    .professional-technology-stack-main-description-heading {
+        font-size: 0.85rem;
+        line-height: 1.55;
+    }
+
+    .professional-technology-stack-icons-grid-all-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .tech i {
+        font-size: 38px;
+    }
+
+    .tech {
+        font-size: 0.8rem;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 375px) {
+    .professional-technology-stack-content-global-wrapper {
+        width: 96%;
+    }
+
+    .professional-technology-stack-main-title-heading {
+        font-size: 1.5rem;
+    }
+
+    .professional-technology-stack-main-description-heading {
+        font-size: 0.82rem;
+    }
+
+    .professional-technology-stack-icons-grid-all-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .tech i {
+        font-size: 34px;
+    }
+
+    .tech {
+        font-size: 0.78rem;
+        gap: 6px;
+    }
+}
+
+@media (max-width: 320px) {
+    .professional-technology-stack-main-title-heading {
+        font-size: 1.3rem;
+    }
+
+    .professional-technology-stack-main-description-heading {
+        font-size: 0.78rem;
+    }
+
+    .professional-technology-stack-icons-grid-all-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .tech i {
+        font-size: 30px;
+    }
+
+    .tech {
+        font-size: 0.75rem;
+        gap: 5px;
+    }
+}

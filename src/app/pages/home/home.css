@@ -1,0 +1,363 @@
+:root {
+    --color-principal: #32CD32;
+    --color-secundario: #00FF66;
+    --color-terciario: #0A0A0A;
+    --color-cuartenario: #2E2E2E;
+    --color-quinario: #FFFFFF;
+}
+
+.hero-section-primary-landing-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+    margin-left: 15rem;
+}
+
+.hero-section-content-wrapper-flex-layout {
+    max-width: 1200px;
+    width: 100%;
+    color: var(--color-quinario);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero-section-textual-information-block {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-section-heading-group-container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.hero-section-main-title-display-typography {
+    font-family: 'Parkinsans-Bold';
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-principal);
+    margin-bottom: 1rem;
+    z-index: 1000;
+}
+
+.hero-section-secondary-subtitle-descriptor {
+    font-family: 'Parkinsans-Bold';
+    font-size: 3.5rem;
+    line-height: 1.2;
+    height: calc(3.6rem * 1.2 * 2);
+    min-height: calc(3.6rem * 1.2 * 2);
+    overflow: hidden;
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: normal;
+    color: var(--color-quinario);
+    text-shadow: 0 0 8px rgba(50, 205, 50, 0.6);
+}
+
+.hero-section-description-text-emphasis {
+    font-family: 'Parkinsans-Regular';
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-quinario);
+    max-width: 600px;
+}
+
+.cursor {
+    color: var(--color-secundario);
+    display: inline;
+    margin-left: 4px;
+    animation: blink 1s infinite;
+    vertical-align: baseline;
+}
+
+.hero-section-call-to-action-button-group {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    z-index: 1000;
+}
+
+.hero-section-primary-call-to-action-button-interactive {
+    padding: 14px 42px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 255, 102, 0.3);
+    cursor: pointer;
+    font-family: 'Parkinsans-SemiBold';
+    font-size: 1rem;
+    color: var(--color-quinario);
+    background:
+        radial-gradient(circle at 30% 30%, rgba(0, 255, 102, 0.5), transparent 60%),
+        radial-gradient(circle at 70% 70%, rgba(50, 205, 50, 0.4), transparent 60%),
+        var(--color-cuartenario);
+    background-size: 200% 200%;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    animation: energyFlow 6s ease-in-out infinite;
+    text-decoration: none;
+}
+
+.hero-section-primary-call-to-action-button-interactive:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 102, 0.6);
+    transform: translateY(-4px) scale(1.03);
+}
+
+.hero-section-secondary-call-to-action-button-outlined {
+    padding: 14px 42px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    font-family: 'Parkinsans-SemiBold';
+    font-size: 1rem;
+    color: var(--color-terciario);
+    text-decoration: none;
+    background:
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.4), transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.2), transparent 60%),
+        var(--color-quinario);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.hero-section-secondary-call-to-action-button-outlined:hover {
+    background: var(--color-principal);
+    color: var(--color-terciario);
+    box-shadow: 0 0 20px var(--color-secundario);
+    transform: translateY(-4px) scale(1.03);
+}
+
+.hero-section-spline-robot-container {
+    flex: 0 0 480px;
+    height: 620px;
+    pointer-events: all;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section-spline-robot-container spline-viewer {
+    margin-left: 80px;
+    width: 100%;
+    height: 100%;
+    background: transparent !important;
+    transform: translateX(20px);
+}
+
+.hero-section-spline-robot-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -60px;
+    width: 170px;
+    height: 60px;
+    background: #0A0A0A;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.hero-robot-skeleton-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    background: linear-gradient(90deg,
+            var(--color-cuartenario) 25%,
+            rgba(50, 205, 50, 0.05) 50%,
+            var(--color-cuartenario) 75%);
+    background-size: 200% 100%;
+    animation: skeletonShimmer 1.8s infinite;
+}
+
+@keyframes skeletonShimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+@keyframes energyFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-section-primary-landing-container {
+        margin-left: 0;
+        padding: 2rem;
+    }
+
+    .hero-section-spline-robot-container {
+        flex: 0 0 340px;
+        height: 380px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-section-primary-landing-container {
+        margin-left: 0;
+        padding: 2rem 1.5rem;
+    }
+
+    .hero-section-content-wrapper-flex-layout {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-section-spline-robot-container {
+        display: none;
+    }
+
+    .hero-section-textual-information-block {
+        max-width: 100%;
+    }
+
+    .hero-section-secondary-subtitle-descriptor {
+        font-size: 2.8rem;
+        height: calc(2.8rem * 1.2 * 2);
+        min-height: calc(2.8rem * 1.2 * 2);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section-primary-landing-container {
+        margin-left: 0;
+        padding: 6rem 1.5rem 2rem;
+        justify-content: center;
+    }
+
+    .hero-section-content-wrapper-flex-layout {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .hero-section-spline-robot-container {
+        display: none;
+    }
+
+    .hero-section-textual-information-block {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .hero-section-main-title-display-typography {
+        font-size: 1.1rem;
+        letter-spacing: 1.5px;
+    }
+
+    .hero-section-secondary-subtitle-descriptor {
+        font-size: 2.4rem;
+        height: calc(2.4rem * 1.2 * 2);
+        min-height: calc(2.4rem * 1.2 * 2);
+    }
+
+    .hero-section-description-text-emphasis {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    .hero-section-call-to-action-button-group {
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .hero-section-primary-call-to-action-button-interactive,
+    .hero-section-secondary-call-to-action-button-outlined {
+        padding: 12px 28px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 430px) {
+    .hero-section-primary-landing-container {
+        padding: 1rem 1.2rem 2rem;
+        margin-bottom: -250px;
+    }
+
+    .hero-section-secondary-subtitle-descriptor {
+        font-size: 2rem;
+        height: calc(2rem * 1.2 * 2);
+        min-height: calc(2rem * 1.2 * 2);
+    }
+
+    .hero-section-call-to-action-button-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-section-primary-call-to-action-button-interactive,
+    .hero-section-secondary-call-to-action-button-outlined {
+        width: 100%;
+        text-align: center;
+        padding: 13px 1px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero-section-primary-landing-container {
+        padding: 5rem 1rem 2rem;
+        margin-bottom: -200px;
+    }
+
+    .hero-section-main-title-display-typography {
+        font-size: 1rem;
+    }
+
+    .hero-section-secondary-subtitle-descriptor {
+        font-size: 1.7rem;
+        height: calc(1.7rem * 1.2 * 2);
+        min-height: calc(1.7rem * 1.2 * 2);
+    }
+
+    .hero-section-description-text-emphasis {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-section-secondary-subtitle-descriptor {
+        font-size: 1.5rem;
+        height: calc(1.5rem * 1.2 * 2);
+        min-height: calc(1.5rem * 1.2 * 2);
+    }
+
+    .hero-section-main-title-display-typography {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+}

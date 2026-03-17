@@ -1,0 +1,140 @@
+<div id="project" class="projects-wrapper">
+    <div class="projects-container">
+
+        <div class="section-header">
+            <h1 class="section-title">Proyectos</h1>
+            <div class="title-bar"></div>
+        </div>
+
+        <div class="cards-list">
+            <div class="project-card" *ngFor="let project of projects; let i = index" (click)="openModal(project)">
+                <div class="card-image">
+                    <div class="image-overlay">
+                        <span class="project-year">{{ project.year }}</span>
+                    </div>
+                    <div class="slideshow-container">
+                        <img *ngFor="let img of project.images; let j = index" [src]="img"
+                            [class.active]="j === project.currentImageIndex" class="slide-img" alt="project image" />
+                    </div>
+                    <div class="slide-dots" *ngIf="project.images.length > 1">
+                        <span *ngFor="let img of project.images; let j = index" class="dot-indicator"
+                            [class.active]="j === project.currentImageIndex"></span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-top">
+                        <div class="card-tags">
+                            <span class="tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+                        </div>
+                        <h2 class="card-title">{{ project.title }}</h2>
+                        <p class="card-desc">{{ project.shortDesc }}</p>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="tech-pills">
+                            <span class="pill" *ngFor="let tech of project.previewTech">{{ tech }}</span>
+                        </div>
+                        <button class="btn-detail" (click)="openModal(project); $event.stopPropagation()">
+                            <span>Ver más detalle</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DETALLE -->
+    <div class="modal-backdrop" [class.active]="selectedProject" (click)="closeModal()">
+        <div class="modal-panel" (click)="$event.stopPropagation()" *ngIf="selectedProject">
+
+            <button class="modal-close" (click)="closeModal()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+
+            <div class="modal-image">
+                <div class="slideshow-container">
+                    <img *ngFor="let img of selectedProject.images; let j = index" [src]="img"
+                        [class.active]="j === selectedProject.currentImageIndex" class="slide-img"
+                        alt="project image" />
+                </div>
+                <div class="modal-image-label">{{ selectedProject.category }}</div>
+                <div class="slide-dots" *ngIf="selectedProject.images.length > 1">
+                    <span *ngFor="let img of selectedProject.images; let j = index" class="dot-indicator"
+                        [class.active]="j === selectedProject.currentImageIndex"></span>
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-header">
+                    <span class="modal-year">{{ selectedProject.year }}</span>
+                    <h2 class="modal-title">{{ selectedProject.title }}</h2>
+                    <p class="modal-desc">{{ selectedProject.description }}</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-section-title">
+                        <span class="dot"></span>Lenguajes
+                    </h3>
+                    <div class="modal-pills">
+                        <span class="modal-pill lang" *ngFor="let l of selectedProject.languages">{{ l }}</span>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-section-title">
+                        <span class="dot"></span>Frameworks
+                    </h3>
+                    <div class="modal-pills">
+                        <span class="modal-pill fw" *ngFor="let f of selectedProject.frameworks">{{ f }}</span>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-section-title">
+                        <span class="dot"></span>Herramientas
+                    </h3>
+                    <div class="modal-pills">
+                        <span class="modal-pill tool" *ngFor="let t of selectedProject.tools">{{ t }}</span>
+                    </div>
+                </div>
+
+                <button class="btn-video" (click)="openVideo(selectedProject)">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                    Ver video del proyecto
+                </button>
+
+                <a *ngIf="selectedProject.webUrl" [href]="selectedProject.webUrl" target="_blank" class="btn-web">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path
+                            d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    </svg>
+                    Ver sitio web
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- VIDEO FLOTANTE -->
+    <div class="video-backdrop" [class.active]="videoOpen" (click)="closeVideo()">
+        <div class="video-modal" (click)="$event.stopPropagation()">
+            <button class="video-close" (click)="closeVideo()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+            <div class="video-wrapper" *ngIf="currentVideoUrl">
+                <video *ngIf="isLocalVideo(currentVideoUrl)" [src]="currentVideoUrl" controls
+                    class="video-player"></video>
+            </div>
+        </div>
+    </div>
+
+</div>

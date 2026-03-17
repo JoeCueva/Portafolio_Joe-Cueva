@@ -1,0 +1,45 @@
+<div class="portfolio-primary-navigation-wrapper-container">
+    <div class="portfolio-navigation-structural-alignment-grid-system">
+        <div class="portfolio-navigation-avatar-item-element">
+            <img class="portfolio-navigation-icon-images-element" src="/images/vistaPerfil/fotoPerfil.jpg" alt="avatar"
+                (click)="abrirModal()" style="cursor: pointer;">
+            <strong>Joe Cueva</strong>
+        </div>
+
+        <div class="portfolio-navigation-interactive-link-group-container">
+            <a class="portfolio-navigation-link-item-element" href="#hero">Inicio</a>
+            <a class="portfolio-navigation-link-item-element" href="#about">Sobre Mi</a>
+            <a class="portfolio-navigation-link-item-element" href="#skills">Habilidades</a>
+            <a class="portfolio-navigation-link-item-element" href="#project">Proyectos</a>
+            <a class="portfolio-navigation-link-item-element" href="#contacto">Contactos</a>
+        </div>
+
+        <button class="nav-hamburger-button" (click)="toggleMenu()" [class.open]="menuOpen" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+</div>
+
+<div class="nav-mobile-menu-overlay" [class.open]="menuOpen" (click)="cerrarMenu()">
+</div>
+
+<div class="nav-mobile-menu-panel" [class.open]="menuOpen">
+    <a class="nav-mobile-link" href="#hero" (click)="cerrarMenu()">Inicio</a>
+    <a class="nav-mobile-link" href="#about" (click)="cerrarMenu()">Sobre Mi</a>
+    <a class="nav-mobile-link" href="#skills" (click)="cerrarMenu()">Habilidades</a>
+    <a class="nav-mobile-link" href="#project" (click)="cerrarMenu()">Proyectos</a>
+    <a class="nav-mobile-link" href="#contacto" (click)="cerrarMenu()">Contactos</a>
+</div>
+
+@if (mostrarModel) {
+<div class="nav-modal-overlay" (click)="cerrarModal()">
+    <div class="nav-modal-content" (click)="$event.stopPropagation()">
+        <button class="nav-modal-close" (click)="cerrarModal()">✕</button>
+        <img class="nav-modal-image" src="/images/vistaPerfil/fotoPerfil.jpg" alt="Joe Cueva">
+        <p class="nav-modal-name">Joe Cueva</p>
+    </div>
+</div>
+}
