@@ -56,6 +56,8 @@
 
 .tech i {
     font-size: 55px;
+    color: var(--color-quinario);
+    filter: grayscale(80%) brightness(3.5) contrast(0.3);
 }
 
 .tech:hover {

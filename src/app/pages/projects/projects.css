@@ -759,9 +759,14 @@
         width: 96vw;
     }
 
-    .btn-video,
-    .btn-web {
+    .btn-video {
         width: 100%;
+        font-size: 13px;
+        padding: 12px;
+    }
+
+    .btn-web {
+        width: 92%;
         font-size: 13px;
         padding: 12px;
     }
@@ -801,9 +806,10 @@
     }
 
     .modal-panel {
+        margin-top: 40px;
         grid-template-rows: 200px 1fr;
         width: 98vw;
-        height: 92vh;
+        height: 83vh;
         border-radius: 14px;
     }
 
@@ -840,7 +846,6 @@
     }
 }
 
-/* ── MÓVIL PEQUEÑO (iPhone SE, Galaxy A) ── */
 @media (max-width: 375px) {
     .projects-wrapper {
         padding: 36px 12px;
@@ -884,7 +889,6 @@
     }
 }
 
-/* ── MÓVIL MUY PEQUEÑO (Galaxy Fold cerrado) ── */
 @media (max-width: 320px) {
     .projects-wrapper {
         padding: 32px 10px;

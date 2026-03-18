@@ -102,7 +102,7 @@ export class Projects implements OnDestroy {
       year: '2025',
       tags: ['Mobile App', 'Biblioteca Digital'],
       previewTech: ['Kotlin', 'Android', 'Firebase', 'SQLite'],
-      images: ['assets/images/vistaBibliotecaMobile/Imagen01.png', 'assets/images/vistaBibliotecaMobile/imagen02.png', 'assets/images/vistaBibliotecaMobile/imagen03.png', '/images/vistaBibliotecaMobile/imagen04.png'],
+      images: ['assets/images/vistaBibliotecaMobile/Imagen01.png', 'assets/images/vistaBibliotecaMobile/imagen02.png', 'assets/images/vistaBibliotecaMobile/imagen03.png', 'assets/images/vistaBibliotecaMobile/imagen04.png'],
       currentImageIndex: 0,
       languages: ['Kotlin', 'SQL'],
       frameworks: ['Android SDK'],

@@ -55,9 +55,15 @@
     font-family: 'Parkinsans-Light';
     font-size: 1rem;
 }
+.portfolio-footer-call-to-action-primary-interactive-container-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: -20px;
+}
 
 .portfolio-footer-call-to-action-primary-interactive-button-element {
-    margin-top: 10px;
+    margin-top: auto;
     padding: 14px 40px;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -338,6 +344,10 @@
     .portfolio-footer-call-to-action-secondary-description-text {
         font-size: 0.85rem;
         padding: 0 4px;
+    }
+
+    .portfolio-footer-call-to-action-primary-interactive-container-button {
+        margin-top: -12px;
     }
 
     .portfolio-footer-call-to-action-primary-interactive-button-element {
