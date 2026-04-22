@@ -111,6 +111,21 @@ export class Projects implements OnDestroy {
 
       videoUrl: 'https://www.youtube.com/embed/...',
       webUrl: './assets/files/Diseño y Portal Web.pdf'
+    },
+    {
+      title: 'Sistema de Comercialización de Vehiculos motorizados',
+      shortDesc: 'Aplicación web para la compra y venta de vehículos motorizados, usados con catálogo filtrable por descripción y registro de usuarios',
+      description: 'Desarrollo de una aplicación web orientada a la compra y venta de vehículos motorizados usados. El sistema permite a los usuarios registrarse, iniciar sesión y gestionar sus publicaciones de vehículos. El catálogo de vehículos es filtrable por descripción, facilitando la búsqueda de opciones específicas. La aplicación fue desarrollada con C# y ASP.NET Core para el backend, utilizando Entity framework para la gestión de datos y para el Frontend. El proyecto busca mejorar la experiencia de compra y venta de vehículos usados a través de una plataforma digital eficiente.',
+      category: 'Web app - Comercialización de Vehículos',
+      year: '2024',
+      tags: ['Web App', 'Comercialización de Vehículos'],
+      previewTech: ['C#', 'ASP.NET Core', 'Entity Framework', 'Bootstrap'],
+      images: ['assets/images/vistaComercializacionAutos/Imagen01.png', 'assets/images/vistaComercializacionAutos/Imagen02.png', 'assets/images/vistaComercializacionAutos/Imagen03.png', 'assets/images/vistaComercializacionAutos/Imagen04.png', 'assets/images/vistaComercializacionAutos/Imagen05.png', 'assets/images/vistaComercializacionAutos/Imagen06.png'],
+      currentImageIndex: 0,
+      languages: ['C#', 'SQL'],
+      frameworks: ['ASP.NET Core', 'Bootstrap'],
+      tools: ['Entity Framework', 'Visual Studio 22', 'Git'],
+      videoUrl: 'https://www.youtube.com/embed/...',
     }
   ];
 

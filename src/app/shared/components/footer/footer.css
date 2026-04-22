@@ -55,6 +55,7 @@
     font-family: 'Parkinsans-Light';
     font-size: 1rem;
 }
+
 .portfolio-footer-call-to-action-primary-interactive-container-button {
     display: flex;
     justify-content: center;
@@ -437,5 +438,134 @@
 
     .portfolio-footer-bottom-copyright-textual-information-container {
         font-size: 0.78rem;
+    }
+}
+
+/* ================= FORMULARIO ================= */
+
+.portfolio-footer-form-wrapper-container {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeSube 0.8s ease 0.6s both;
+}
+
+.portfolio-footer-form-inner-content-flex-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.portfolio-footer-contact {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    padding: 50px 80px 50px 50px;
+    border-radius: 16px;
+
+    /* background: rgba(46, 46, 46, 0.35); */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.4),
+        inset 0 0 20px rgba(0, 255, 102, 0.05);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.form-grid input[type="email"],
+.form-grid select {
+    grid-column: span 2;
+}
+
+
+.portfolio-footer-contact input,
+.portfolio-footer-contact select,
+.portfolio-footer-contact textarea {
+    width: 100%;
+    padding: 14px 2px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: rgba(10, 10, 10, 0.6);
+    color: var(--color-quinario);
+    font-family: 'Parkinsans-Regular';
+    font-size: 0.95rem;
+
+    outline: none;
+    transition: all 0.3s ease;
+}
+.portfolio-footer-contact input::placeholder,
+.portfolio-footer-contact textarea::placeholder {
+    color: rgba(255, 255, 255, 0.596);
+    padding-left: 10px;
+}
+
+.portfolio-footer-contact input:focus,
+.portfolio-footer-contact select:focus,
+.portfolio-footer-contact textarea:focus {
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 12px rgba(0, 255, 102, 0.25);
+}
+
+.portfolio-footer-contact select {
+    color: rgba(255, 255, 255, 0.596);
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.portfolio-footer-contact textarea {
+    resize: none;
+}
+
+.portfolio-footer-contact button {
+    margin-top: 10px;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+
+    font-family: 'Parkinsans-SemiBold';
+    font-size: 1rem;
+    color: #000;
+
+    background: linear-gradient(90deg, var(--color-principal), var(--color-secundario));
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.portfolio-footer-contact button:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 102, 0.4);
+    transform: translateY(-2px);
+}
+
+.portfolio-footer-contact button:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid input,
+    .form-grid select {
+        grid-column: span 1;
+    }
+
+    .portfolio-footer-contact {
+        padding: 24px;
     }
 }

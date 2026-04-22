@@ -18,6 +18,35 @@
         </div>
     </div>
 
+    <div class="portfolio-footer-form-wrapper-container" id="form">
+        <div class="portfolio-footer-form-inner-content-flex-container">
+            <form class="portfolio-footer-contact">
+                <div class="form-grid">
+
+                    <input type="text" name="empresa" ngModel required placeholder="Empresa / Reclutador">
+
+                    <input type="text" name="nombre" ngModel required placeholder="Nombre completo">
+
+                    <input type="email" name="email" ngModel required placeholder="Correo electrónico">
+
+                    <select name="tipo" ngModel required>
+                        <option value="" disabled selected>Tipo de contrato</option>
+                        <option value="junior">Junior</option>
+                        <option value="Fulltime">FullTime</option>
+                        <option value="freelance">Freelance</option>
+                    </select>
+
+                </div>
+                <textarea name="mensaje" ngModel rows="4"
+                    placeholder="Cuéntame sobre la oportunidad de trabajo"></textarea>
+
+                <button type="submit">
+                    Enviar mensaje
+                </button>
+            </form>
+        </div>
+    </div>
+
     <div class="portfolio-footer-bottom-legal-and-social-media-wrapper-container">
 
         <div class="portfolio-footer-bottom-legal-and-social-media-inner-flex-alignment-container">
